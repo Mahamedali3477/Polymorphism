@@ -1,0 +1,370 @@
+Step 1
+
+
+#include <iostream>
+
+int main() {
+  std::cout << "Hello, World" << std::endl;
+
+  return 0;
+}
+
+Step 2
+
+
+#include <iostream>
+
+class Shape {
+};
+
+class Rectangle : public Shape {
+ public:
+  // constructor
+  Rectangle(double width, double height)
+    : width{width}, height{height} {
+  }
+
+ private:
+  // member variables
+  double width;
+  double height;
+};
+
+class Square : public Shape {
+ public:
+  // constructor
+  Square(double side)
+    : side{side} {
+  }
+
+ private:
+  // member variables
+  double side;
+};
+
+class Circle : public Shape {
+ public:
+  // constructor
+  Circle(double radius)
+    : radius{radius} {
+  }
+
+ private:
+  // member variables
+  double radius;
+};
+
+int main() {
+  Rectangle r1{ 3.0, 5.0 };
+  Square s1{ 4.0 };
+
+  Circle c1{ 10.0 };
+
+  // printArea(r1);
+  // printArea(s1);
+  // printArea(c1);
+
+  return 0;
+}
+
+Step 3
+
+#include <cmath>
+#include <iostream>
+
+class Shape {
+ public:
+  // pure-virtual area function
+  virtual double area() const = 0;
+};
+
+class Rectangle : public Shape {
+ public:
+  // constructor
+  Rectangle(double width, double height)
+    : width{width}, height{height} {
+  }
+
+  // override of Shape's virtual area function
+  double area() const override {
+    return width * height;
+  }
+
+ private:
+  // member variables
+  double width;
+  double height;
+};
+
+class Square : public Shape {
+ public:
+  // constructor
+  Square(double side)
+    : side{side} {
+  }
+
+  // override of Shape's virtual area function
+  double area() const override {
+    return side * side;
+  }
+
+ private:
+  // member variables
+  double side;
+};
+
+class Circle : public Shape {
+ public:
+  // constructor
+  Circle(double radius)
+    : radius{radius} {
+  }
+
+  // override of Shape's virtual area function
+  double area() const override {
+    return M_PI * radius * radius;
+  }
+
+ private:
+  // member variables
+  double radius;
+};
+
+void printArea(const Shape& shape) {
+  std::cout << shape.area() << "\n";
+}
+
+int main() {
+  Rectangle r1{ 3.0, 5.0 };
+  Square s1{ 4.0 };
+
+  Circle c1{ 10.0 };
+
+  printArea(r1);
+  printArea(s1);
+  printArea(c1);
+
+  return 0;
+}
+Step 4:
+
+#include <cmath>
+#include <iostream>
+
+class Rectangle {
+ public:
+  // constructor
+  Rectangle(double width, double height)
+    : width{width}, height{height} {
+  }
+Step 5
+
+#include <cmath>
+#include <iostream>
+
+class Rectangle {
+ public:
+  // constructor
+  Rectangle(double width, double height)
+    : width{width}, height{height} {
+  }
+
+  // returns the area of the rectangle
+  double area() const {
+    return width * height;
+  }
+
+ private:
+  // member variables
+  double width;
+  double height;
+};
+
+class Square {
+ public:
+  // constructor
+  Square(double side)
+    : side{side} {
+  }
+
+  // returns the area of the square
+  double area() const {
+    return side * side;
+  }
+
+ private:
+  // member variables
+  double side;
+};
+
+class Circle {
+ public:
+  // constructor
+  Circle(double radius)
+    : radius{radius} {
+  }
+
+  // returns the area of the circle
+  double area() const {
+    return M_PI * radius * radius;
+  }
+
+ private:
+  // member variables
+  double radius;
+};
+
+// templated version of the printArea function
+template<class T>
+void printArea(const T& shape) {
+  std::cout << shape.area() << "\n";
+}
+
+int main() {
+  Rectangle r1{ 3.0, 5.0 };
+  Square s1{ 4.0 };
+
+  Circle c1{ 10.0 };
+
+  printArea(r1);
+  printArea(s1);
+  printArea(c1);
+
+  return 0;
+}
+  // returns the area of the rectangle
+  double area() const {
+    return width * height;
+  }
+
+ private:
+  // member variables
+  double width;
+  double height;
+};
+
+class Square {
+ public:
+  // constructor
+  Square(double side)
+    : side{side} {
+  }
+
+  // returns the area of the square
+  double area() const {
+    return side * side;
+  }
+
+ private:
+  // member variables
+  double side;
+};
+
+class Circle {
+ public:
+  // constructor
+  Circle(double radius)
+    : radius{radius} {
+  }
+
+  // returns the area of the circle
+  double area() const {
+    return M_PI * radius * radius;
+  }
+
+ private:
+  // member variables
+  double radius;
+};
+
+void printArea(const Shape& shape) {
+  std::cout << shape.area() << "\n";
+}
+
+int main() {
+  Rectangle r1{ 3.0, 5.0 };
+  Square s1{ 4.0 };
+
+  Circle c1{ 10.0 };
+
+  printArea(r1);
+  printArea(s1);
+  printArea(c1);
+
+  return 0;
+}
+Step 6
+
+#include <cmath>
+#include <iostream>
+
+class Rectangle {
+ public:
+  // constructor
+  Rectangle(double width, double height)
+    : width{width}, height{height} {
+  }
+
+  // returns the area of the rectangle
+  double area() const {
+    return width * height;
+  }
+
+ private:
+  // member variables
+  double width;
+  double height;
+};
+
+class Square {
+ public:
+  // constructor
+  Square(double side)
+    : side{side} {
+  }
+
+  // returns the area of the square
+  double area() const {
+    return side * side;
+  }
+
+ private:
+  // member variables
+  double side;
+};
+
+class Circle {
+ public:
+  // constructor
+  Circle(double radius)
+    : radius{radius} {
+  }
+
+  // returns the area of the circle
+  double area() const {
+    return M_PI * radius * radius;
+  }
+
+ private:
+  // member variables
+  double radius;
+};
+
+// templated version of the printArea function
+template<class T>
+void printArea(const T& shape) {
+  std::cout << shape.area() << "\n";
+}
+
+int main() {
+  Rectangle r1{ 3.0, 5.0 };
+  Square s1{ 4.0 };
+
+  Circle c1{ 10.0 };
+
+  printArea(r1);
+  printArea(s1);
+  printArea(c1);
+
+  return 0;
+}
